@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     
+header {
+    
+    background-color:#E40C2B;
+    width: 100%;
+    float: left;
+    box-shadow: 0px 0px 0px #777;
+	position:fixed;
+	top:0px
+}
+.wrapper {
+    max-width: 1100px;
+    padding: 0px 10px;
+    margin: auto;
+	font-size:10px;
+  
+}
+.logo {
+    float: left;
+    margin: 10px 0px;
+    max-width: 100px;
+	position:relative;
+	top:65px;
+}
+.logo img{
+    max-width: 90%;
+}
+ 
+
+
+/*-- Navbar CSS --*/
+.nav-menus {
+    float: right;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+.nav-menus li {
+    list-style: none;
+    position: relative;
+    padding: 20px 0px;
+}
+.nav-menus a {
+    color: white;
+    position: relative;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 15px 12px;
+    z-index: 1;
+}
+.nav-menus li:hover {
+    color: #fff;
+}
+.nav-menus a:after {
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: #B94629;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 4px;
+    transition: 0.5s;
+    z-index: -1;
+}
+.nav-menus li:hover > a:after{
+    height: 100%;
+}
+.nav-menus i{
+    margin-right: 8px;
+    font-size: 16px;
+}
+.toggle-btn{
+    float: right;
+    height: 90px;
+    line-height: 90px;
+    color: #fff;
+    font-size: 26px;
+    display: none;
+    cursor: pointer;
+}
+.nav-menus.active{
+    display: block;
+}
+
+/*-- Sub Menus CSS--*/
+.sub-menus ul {
+    position: absolute;
+    top: 80px;
+    background-color: #fff;
+    padding: 5px 0px;
+    min-width: 150px;
+    box-shadow: 0px 0px 8px #636363;
+    border-radius: 4px;
+    display: none;
+}
+.sub-menus:hover ul {
+    display: inline;
+}
+.sub-menus ul li {
+    padding: 5px 0px;
+}
+.sub-menus ul li a {
+    padding: 8px 10px;
+    display: block;
+    color: #5a30a5;
+}
+.sub-menus ul li:hover a {
+    color: black;
+}
+.sub-menus ul::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -9px;
+}
+
+/*-- Responsive Menus Bar CSS--*/
+@media (max-width:767px) {
+.toggle-btn{
+    display: block;
+}
+.nav-menus {
+    position: absolute;
+    width: 100%;
+    background: black;
+    top: 100px;
+    right: 0;
+    display: none;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.nav-menus::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #4e2890;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+.sub-menus ul {
+    position: static;
+}
+.sub-menus ul::before {
+    display: none;
+}
+.nav-menus li {
+    padding: 0px;
+}
+.nav-menus li a {
+    display: inline;
+    margin: 15px 0px;
+}
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+       	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- Start Header -->
+<header>
+    <div class="wrapper">
+        <!-- Brand Image -->
+        <a href="#" class="logo"><img src="20220214_143322_0000.png" alt=""></a>
+        <i class="toggle-btn fas fa-bars"></i>
+        <!-- Navbar -->
+        <nav class="nav-menus">
+            <li><a href="e.html"><i class="fas fa-home"></i> HOME</a></li>
+			
+			 
+
+            <li class="sub-menus" type="A"><a href="#"><i class="fas fa-list-ul"></i> STORY</a>
+                <ul>
+                    <li><a href="story11.html" target="no"><i class="fab fa-blogger-b/"></i> The Era</a></li>
+                    <li><a href="story21.html"  target="no"><i class="fab fa-wordpress-simple/"></i> Christmas</a></li>
+                   
+                    
+                </ul>
+				            
+							
+            </li>
+            
+           
+        </nav>
+    </div>
+	  
+	<!-- Toggle jQuery for Small Devices -->
+<script type="text/javascript">
+    $(".toggle-btn").click(function(){
+        $(this).toggleClass("fa-times");
+        $(".nav-menus").toggleClass("active");
+    });
+</script>
+
+</header>
+<!-- End Header -->
+
+<div>
+<iframe src="x.html" name="no" width="100%" height="2350px" style=" border:none;scrollbar:none;margin-top:40px"></div>
+
+
+
+
+ 
+
+
+
+
+
+</body>
+</html>
